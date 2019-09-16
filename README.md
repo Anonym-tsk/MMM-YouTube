@@ -23,7 +23,6 @@ git clone https://github.com/eouia/MMM-YouTube
 ### Simple Version (Just being ready)
 ```js
 {
-  disabled:disabled["MMM-YouTube"],
   module: "MMM-YouTube",
   position: "top_right",
 },
@@ -33,7 +32,6 @@ git clone https://github.com/eouia/MMM-YouTube
 You don't need to copy & paste all of these. Just select what you need and rewrite it into your `config.js`. Other values will be applied automatically.
 ```js
 {
-  disabled:disabled["MMM-YouTube"],
   module: "MMM-YouTube",
   position: "top_right",
   config: {
