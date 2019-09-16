@@ -134,8 +134,14 @@ Module.register("MMM-YouTube", {
       var regulateURL = (url) => {
         var regex = new RegExp(/[\/?&]v((=|\/)([^?&#\/]*)|\?|\/|&|#|$)/)
         var results = regex.exec(url)
-        if (!results) return null
-        if (!results[3]) return ''
+        if (!results) {
+          var shortener = new RegExp(/youtu\.be\/(.+)$/)
+          var ret = shortener.exec(url)
+          if (!ret) return null
+          if (ret[1]) return ret[1]
+          return null
+        }
+        if (!results[3]) return null
         return decodeURIComponent(results[3].replace(/\+/g, ' '));
       }
       var regulated = regulateURL(payload.id)

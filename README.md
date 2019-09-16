@@ -8,6 +8,11 @@ MagicMirror module for youtube player with runtime configuration and controllabl
 - Controllable by notification and callback
 - Controllable by MMM-TelegramBot command
 
+## New Update
+**[1.0.1]**
+- added : `youtu.be` URL format is supported.
+
+
 ## Installation
 ```js
 cd ~/MagicMirror/modules
