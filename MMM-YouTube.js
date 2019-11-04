@@ -18,6 +18,7 @@ Module.register("MMM-YouTube", {
     verbose:true,
     telegramBotCommand: {
       YOUTUBE_LOAD_BY_URL: "yt",
+      YOUTUBE_LOAD_PLAYLIST: "yl",
       YOUTUBE_CONTROL: "yc"
     },
     outNotifications: {
@@ -47,10 +48,17 @@ Module.register("MMM-YouTube", {
   getCommands: function(commander) {
     commander.add({
       command: this.config.telegramBotCommand.YOUTUBE_LOAD_BY_URL,
+      description: "Play youtube clip by url",
       callback: "T_yt"
     })
     commander.add({
+      command: this.config.telegramBotCommand.YOUTUBE_LOAD_PLAYLIST,
+      description: "Play youtube playlist by ID",
+      callback: "T_yl"
+    })
+    commander.add({
       command: this.config.telegramBotCommand.YOUTUBE_CONTROL,
+      description: "Youutube player control - https://developers.google.com/youtube/iframe_api_reference#Functions",
       callback: "T_yc"
     })
   },
@@ -58,6 +66,14 @@ Module.register("MMM-YouTube", {
   T_yt: function(command, handler) {
     if (handler.args) {
       this.loadVideo({type:"url", id:handler.args, autoplay:true})
+    } else {
+      this.loadVideo(this.config.onStartPlay)
+    }
+  },
+
+  T_yl: function(command, handler) {
+    if (handler.args) {
+      this.loadVideo({type:"playlist", id:handler.args, autoplay:true})
     } else {
       this.loadVideo(this.config.onStartPlay)
     }

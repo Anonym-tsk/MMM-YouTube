@@ -9,6 +9,8 @@ MagicMirror module for youtube player with runtime configuration and controllabl
 - Controllable by MMM-TelegramBot command
 
 ## New Update
+**[1.0.2]**
+- added: `/yl` - `MMM-TelegramBot` command for playing playlist by id
 **[1.0.1]**
 - added : `youtu.be` URL format is supported.
 
@@ -113,7 +115,8 @@ See `VIDEO_LOAD` section also.
 
 #### telegramBotCommand: {}
 You can redefine telegramBot commands for this module. Default values are
-- `/yt` : load video
+- `/yt` : load video by url
+- `/yl` : load playlist with id
 - `/yc` : control video
 
 #### outNotifications: {}
@@ -124,7 +127,8 @@ I believe you don't need to modify this. You can redefine notification message w
 
 ## TelegramBot Commands
 You can load and control video with MMM-TelegramBot
-- `/yt YOUTUBE_URL` : load specific Youtube clip on MagicMirror and play it.
+- `/yt YOUTUBE_URL` : load specific Youtube clip on MagicMirror and play it. (e.g: `/yt https://www.youtube.com/watch?v=6i0a7RDPkM8`)
+- `/yl YOUTUBE_PLAYLIST_ID` : load specific Youtube playlist on MagicMirror and play it. (e.g: `/yl PL55713C70BA91BD6E`)
 - `/yc CONTROL_COMMAND` : control video. (e.g: `/yc pauseVideo`)
 See `Control Commands` section for Available control commands
 
