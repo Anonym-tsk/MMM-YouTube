@@ -11,6 +11,7 @@ MagicMirror module for youtube player with runtime configuration and controllabl
 ## New Update
 **[1.0.2]**
 - added: `/yl` - `MMM-TelegramBot` command for playing playlist by id
+
 **[1.0.1]**
 - added : `youtu.be` URL format is supported.
 
