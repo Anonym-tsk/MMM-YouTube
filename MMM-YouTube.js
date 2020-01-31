@@ -9,6 +9,7 @@ Module.register("MMM-YouTube", {
       cc_load_policy: 0,
     },
     defaultQuality: "default",
+    volume: 100,
     disableCC: true,
     showPlayingOnly: true,
     onStartPlay: null,
@@ -215,6 +216,7 @@ Module.register("MMM-YouTube", {
 
   playerOnReady: function(ev) {
     if (this.config.verbose) console.log("[YOUTUBE] Player is ready.")
+    this.controlPlayer("setVolume", this.config.volume);
     if (this.config.onStartPlay) {
       this.loadVideo(this.config.onStartPlay)
     }

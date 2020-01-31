@@ -40,6 +40,7 @@ You don't need to copy & paste all of these. Just select what you need and rewri
   config: {
     verbose:true,
     defaultQuality: "default",
+    volume: 100,
     disableCC: true,
     showPlayingOnly: true,
     defaultLoop: false,
@@ -77,6 +78,9 @@ The parameter value can be `small`, `medium`, `large`, `hd720`, `hd1080`, `highr
 And even if you set other value, it doesn't mean the quality is guaranteed on playing. It could be changed by YouTube by force. Usually, Quality could be changed by player size, network speed, computing power and etc.
 
 > more : https://developers.google.com/youtube/iframe_api_reference#Playback_quality
+
+#### volume: 100
+Set youtube player volume on startup (`0` to `100`)
 
 #### disableCC: true
 Caption will not be shown with `true`
