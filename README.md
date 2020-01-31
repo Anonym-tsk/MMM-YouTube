@@ -205,5 +205,7 @@ Each control command could have these fields.
 - `callback`: OPTIONAL. This callback function will be called after command with result.
 
 #### Available commands
-`playVideo`, `pauseVideo`, `stopVideo`, `nextVideo`, `previousVideo`, `mute`, `unMute`, ...
+`playVideo`, `pauseVideo`, `nextVideo`, `previousVideo`, `mute`, `unMute`, ...
 See https://developers.google.com/youtube/iframe_api_reference#Functions
+
+> KNOWN ISSUE: When you use `stopVideo`, it will not stop the video but replay current video. Use `pauseVideo` instead. I'll fix this someday... Sorry.
