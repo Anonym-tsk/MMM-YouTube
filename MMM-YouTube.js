@@ -282,6 +282,10 @@ Module.register("MMM-YouTube", {
         break
     }
     if (this.config.verbose) console.log(`[YOUTUBE] Player Error: (${ev.data})`, kind)
+    this.sendNotification("YOUTUBE_PLAYER_ERROR", {
+      kind: kind,
+      code: ev.data
+    })
     if (ev.data == 2) {
       ev.target.stopVideo()
     }

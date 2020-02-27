@@ -9,6 +9,9 @@ MagicMirror module for youtube player with runtime configuration and controllabl
 - Controllable by MMM-TelegramBot command
 
 ## New Update
+**[1.0.3]**
+- added: `YOUTUBE_PLAYER_ERROR` (payload:{kind, code}) notification will be emitted on youtube player error.
+
 **[1.0.2]**
 - added: `/yl` - `MMM-TelegramBot` command for playing playlist by id
 
