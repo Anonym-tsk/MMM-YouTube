@@ -298,7 +298,7 @@ Module.register("MMM-YouTube", {
       options.playerVars = Object.assign({}, this.config.playerVars)
     }
 
-    options = Object.assign({}, this.config.defaultPlayerOptions, options)
+    options = Object.assign({}, this.config.playerVars, options)
     options.events = {}
     options.events.onReady = (ev) => {
       this.playerOnReady(ev)
