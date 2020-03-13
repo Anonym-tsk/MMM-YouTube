@@ -12,14 +12,7 @@ MagicMirror module for youtube player with runtime configuration and controllabl
 **[1.0.4]**
 - Added width and height to config options to set Youtube window in MM - 13/03/2020 andyb2000
 
-**[1.0.3]**
-- added: `YOUTUBE_PLAYER_ERROR` (payload:{kind, code}) notification will be emitted on youtube player error.
 
-**[1.0.2]**
-- added: `/yl` - `MMM-TelegramBot` command for playing playlist by id
-
-**[1.0.1]**
-- added : `youtu.be` URL format is supported.
 
 
 ## Installation
@@ -217,3 +210,14 @@ Each control command could have these fields.
 See https://developers.google.com/youtube/iframe_api_reference#Functions
 
 > KNOWN ISSUE: When you use `stopVideo`, it will not stop the video but replay current video. Use `pauseVideo` instead. I'll fix this someday... Sorry.
+
+
+## UPDATE HISTORY
+**[1.0.3]**
+- added: `YOUTUBE_PLAYER_ERROR` (payload:{kind, code}) notification will be emitted on youtube player error.
+
+**[1.0.2]**
+- added: `/yl` - `MMM-TelegramBot` command for playing playlist by id
+
+**[1.0.1]**
+- added : `youtu.be` URL format is supported.
