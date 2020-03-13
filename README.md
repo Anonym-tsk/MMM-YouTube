@@ -9,8 +9,8 @@ MagicMirror module for youtube player with runtime configuration and controllabl
 - Controllable by MMM-TelegramBot command
 
 ## New Update
-**[1.0.4]**
-- Added width and height to config options to set Youtube window in MM - 13/03/2020 andyb2000
+**[1.0.4] (2020-03-13)**
+- Added width and height to config options to set Youtube window in MM - @andyb2000
 
 
 
