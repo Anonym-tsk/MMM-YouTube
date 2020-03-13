@@ -9,6 +9,8 @@ Module.register("MMM-YouTube", {
       cc_load_policy: 0,
     },
     defaultQuality: "default",
+    width: "800px",
+    height: "600px",
     volume: 100,
     disableCC: true,
     showPlayingOnly: true,
@@ -96,6 +98,8 @@ Module.register("MMM-YouTube", {
     var dom = document.createElement("div")
     dom.id = "YOUTUBE"
     if (this.config.showPlayingOnly) dom.style.display = "none"
+    dom.style.width = this.config.width
+    dom.style.height = this.config.height
     var player = document.createElement("div")
     player.id = "YOUTUBE_PLAYER"
     dom.appendChild(player)
@@ -286,9 +290,15 @@ Module.register("MMM-YouTube", {
       kind: kind,
       code: ev.data
     })
-    if (ev.data == 2) {
-      ev.target.stopVideo()
+// Avoid race condition - stop an already stopped video loops this function indefinitely
+//    if (ev.data == 2) {
+//      ev.target.stopVideo()
+//    }
+// Work around, 150 unavailable, try to load next video in playlist to keep going
+    if (ev.data == 150) {
+      ev.target.nextVideo()
     }
+
   },
 
   makeYTOptions: function(options={}) {
