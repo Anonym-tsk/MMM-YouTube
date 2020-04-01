@@ -58,6 +58,7 @@ You don't need to copy & paste all of these. Just select what you need and rewri
     },
     telegramBotCommand: {
       YOUTUBE_LOAD_BY_URL: "yt",
+      YOUTUBE_LOAD_PLAYLIST: "yl",
       YOUTUBE_CONTROL: "yc"
     },
     outNotifications: {
