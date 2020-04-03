@@ -236,10 +236,15 @@ Module.register("MMM-YouTube", {
 
     if (this.config.showPlayingOnly) {
       var dom = document.getElementById("YOUTUBE")
-      if (ev.data == 1) {
-        dom.style.display = "block"
-      } else {
-        dom.style.display = "none"
+      switch(ev.data) {
+        case -1:
+        case 0:
+        case 2:
+          dom.style.display = "none"
+          break
+        default:
+          dom.style.display = "block"
+          break
       }
     }
     if (ev.data == 5) {
