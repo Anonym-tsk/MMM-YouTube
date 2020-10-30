@@ -122,14 +122,14 @@ Module.register("MMM-YouTube", {
     }
   },
 
-  notificationReceived: function (noti, payload) {
-    if (noti == "DOM_OBJECTS_CREATED") {
+  notificationReceived: function (notification, payload) {
+    if (notification == "DOM_OBJECTS_CREATED") {
       this.prepare()
     }
-    if (noti == "YOUTUBE_LOAD") {
+    if (notification == "YOUTUBE_LOAD") {
       this.loadVideo(payload)
     }
-    if (noti == "YOUTUBE_CONTROL") {
+    if (notification == "YOUTUBE_CONTROL") {
       /*
         {
           command: "playVideo",
