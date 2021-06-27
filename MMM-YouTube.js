@@ -117,7 +117,7 @@ Module.register("MMM-YouTube", {
   resume: function () {
     this.suspended = false
     var ret = this.controlPlayer("getPlayerState")
-    if (ret == 1) {
+    if (ret == 2) {
       this.controlPlayer("playVideo")
     }
   },
